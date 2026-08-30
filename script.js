@@ -3,7 +3,7 @@ const scoreText = document.getElementById("score");
 const timerText = document.getElementById("timer");
 
 let score = 0;
-let timeLeft = 20;
+let timeLeft = 15;
 
 //クリックごとにscore++
 target.addEventListener("click", () => {
