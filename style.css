@@ -17,3 +17,9 @@ body{
     border-radius: 50%;
     font-size: 72px;
 }
+
+#retry {
+    font-size: 48px;
+    padding: 10px 20px; /*文字の周囲の空白*/
+    margin-top: 20px; /*上のオブジェクト、この場合スコアとの距離*/
+}
