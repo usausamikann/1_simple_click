@@ -1,6 +1,7 @@
 const target = document.getElementById("target");
 const scoreText = document.getElementById("score");
 const timerText = document.getElementById("timer");
+const retry = document.getElementById("retry");
 
 let score = 0;
 let timeLeft = 15;
@@ -26,7 +27,14 @@ target.addEventListener("click", () => {
                 target.style.display = "none";
                 scoreText.style.fontSize = "64px";
                 scoreText.textContent = `Score: ${score}`;
+                //リトライボタン表示
+                retry.style.display = "block";
             }
         }, 1000); //1000ms=1secごとに実行
     }
+});
+
+//リトライでリロード
+retry.addEventListener("click", () => {
+    location.reload();
 });
