@@ -16,8 +16,13 @@ const timerId = setInterval(() => {
     timeLeft--;
     timerText.textContent = `Time: ${timeLeft}`;
 
-    if (timeLeft <= 0) {
+    if (timeLeft <= 0) { //15sec経過後
         clearInterval(timerId);
         target.disabled = true; //ボタン無効化
+        //リザルト表示
+        timerText.style.display = "none";
+        target.style.display = "none";
+        scoreText.style.fontSize = "64px";
+        scoreText.textContent = `Score: ${score}`;
     }
-}, 1000); //1000ms=1sごとに実行
+}, 1000); //1000ms=1secごとに実行
